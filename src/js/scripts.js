@@ -36,11 +36,14 @@ function showData(stories) {
 function showData(stories) {
   var looped = stories
     .map(
-      (story) => `
+      (result) => `
       <div class="item">
-        <h3>${result.title}</h3>
-        <p>${result.abstract}</p>
-      </div>
+        
+        <div><a href="${result.multimedia[0].url}"  target="https://www.nytimes.com/"><img src="${result.multimedia[0].url}"></a> </div>
+        <p class="caption">${result.multimedia[0].caption}</p>
+        <h3 class="news-title"><a href="${result.url}">${result.title}</a></h3>
+        <p class="abstract">${result.abstract}</p>
+        </div>
     `,
     )
     .join('');

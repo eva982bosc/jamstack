@@ -7,10 +7,26 @@ body {
   margin: 0 auto;
 }
 
+.newsgrid {
+  display: flex;
+}
+.stories {
+  display: flex;
+  flex-flow: column;
+}
+
+.news-title {
+  font-weight: bold;
+}
 img {
   width: 100%;
 }
 
+.item {
+  padding: 30px;
+  min-width: 350px;
+  border-bottom: gray dotted 2px;
+}
 a {
   text-decoration: none;
   color: #007eb6;
@@ -29,8 +45,7 @@ nav ul a {
 .content {
   margin-top: 2rem;
   padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+
   border-left: 2px solid #007eb66e;
   border-radius: 4px;
 }
@@ -55,9 +70,24 @@ button {
 }
 
 .pictures img {
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .pictures h1 {
   color: seagreen;
+}
+
+.abstract {
+  font-size: 18px;
+}
+.caption {
+  font-weight: bold;
+  font-size: 13px;
+}
+@media (min-width: 680px) {
+  .stories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
 }

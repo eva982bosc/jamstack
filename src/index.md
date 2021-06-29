@@ -5,6 +5,8 @@ pageTitle: New York Today
 
 ## Articles
 
+<div class=newsgrid><div>
 <div class="stories">replace me! Loading...</div>
+
 
 <button>Show Stories</button>
